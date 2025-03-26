@@ -117,7 +117,7 @@ class QuizBot(commands.Bot):
         
         # Send the question
         quiz_embed = discord.Embed(
-            title="🤔 Quiz Question",
+            title=f"Question {question_data['no']}",
             description=question_data['question'],
             color=discord.Color.yellow()
         )
@@ -138,7 +138,7 @@ class QuizBot(commands.Bot):
             
             # Congratulate the winner
             await ctx.send(f"🎉 Congratulations {msg.author.mention}! "
-                           f"You answered correctly. Current score: {leaderboard['players'][0]['score']} points!")
+                           f"You answered correctly. Your current score: {leaderboard['players'][0]['score']} points!")
             
             # Display leaderboard
             await ctx.send(format_leaderboard(leaderboard))
