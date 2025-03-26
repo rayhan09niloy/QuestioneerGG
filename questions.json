@@ -1,0 +1,19 @@
+{
+    "questions": [
+        {
+            "no": 0,
+            "question": "What is the capital of France?",
+            "answer": "Paris"
+        },
+        {
+            "no": 1,
+            "question": "Who wrote 'Romeo and Juliet'?", 
+            "answer": "William Shakespeare"
+        },
+        {
+            "no": 2,
+            "question": "What is 2 + 2?",
+            "answer": "4"
+        }
+    ]
+}

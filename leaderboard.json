@@ -1,0 +1,14 @@
+{
+    "players": [
+        {
+            "username": "Player1",
+            "score": 5,
+            "total_questions_answered": 10
+        },
+        {
+            "username": "Player2", 
+            "score": 3,
+            "total_questions_answered": 7
+        }
+    ]
+}
