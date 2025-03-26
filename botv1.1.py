@@ -97,10 +97,15 @@ class QuizBot(commands.Bot):
         self.questions = load_questions()
         self.total_questions = get_total_questions()
         self.current_question_index = 0
+        self.tree = app_commands.CommandTree(self)
 
     async def on_ready(self):
         print(f'Logged in as {self.user}')
         print('------')
+    
+    async def setup_hook(self):
+        await self.tree.sync()  # Sync slash commands
+        print(f'✅ Slash Commands Synced: {len(await self.tree.fetch_commands())}')
 
     @commands.command(name='start_contest')
     async def start_quiz(self, ctx):
@@ -172,7 +177,7 @@ def main():
     bot = QuizBot(command_prefix='/', intents=intents)
     
     # Run the bot (replace with your Discord bot token)
-    bot.run('YOUR_DISCORD_BOT_TOKEN')
+    bot.run('')
 
 if __name__ == '__main__':
     main()
