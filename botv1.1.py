@@ -3,6 +3,7 @@ import json
 import asyncio
 import discord
 from discord.ext import commands
+from discord import app_commands
 
 # Bot setup with updated intents
 intents = discord.Intents.default()
